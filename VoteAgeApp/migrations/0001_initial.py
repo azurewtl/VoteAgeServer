@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
                 ('voteID', models.CharField(max_length=32, serialize=False, primary_key=True)),
                 ('voteTitle', models.CharField(max_length=32)),
                 ('voteAuthor', models.CharField(max_length=32)),
-                ('voteDate', models.CharField(max_length=32)),
+                ('votePublishDate', models.CharField(max_length=32)),
                 ('voteImage', models.CharField(max_length=32)),
             ],
             options={

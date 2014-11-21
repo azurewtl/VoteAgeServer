@@ -2,7 +2,7 @@ from django.contrib import admin
 from VoteAgeApp.models import VoteFeed, Option
 
 class VoteFeedAdmin(admin.ModelAdmin):
-    list_display = ('voteID', 'voteTitle', 'voteAuthor', 'voteDate', 'voteImage' )
+    list_display = ('voteID', 'voteTitle', 'voteAuthor', 'votePublishDate', 'voteImage' )
     search_fields = (['voteID'])
 
 class OptionAdmin(admin.ModelAdmin):
