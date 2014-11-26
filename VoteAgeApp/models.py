@@ -12,7 +12,7 @@ class User(User):
 class VoteFeed(models.Model):
 	voteID = models.CharField(primary_key = True, max_length=32)
 	voteTitle = models.CharField(max_length=32)
-	voteAuthor = models.ForeignKey(User, null = True, blank = True, related_name='voteFeed')
+	voteAuthor = models.CharField(max_length=32)
 	votePublishDate = models.CharField(max_length=32)
 	voteExpireDate = models.CharField(max_length=32)
 	voteImage = models.CharField(max_length=32, null = True)
@@ -21,6 +21,7 @@ class VoteFeed(models.Model):
 class Option(models.Model):
 	voteID = models.ForeignKey(VoteFeed, null = True, blank = True, related_name='option')
 	optionTitle = models.CharField(max_length=32)
+	optionImage = models.CharField(max_length=32)
 	menCount = models.IntegerField()
 	womenCount = models.IntegerField()
 
