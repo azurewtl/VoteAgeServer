@@ -18,13 +18,13 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class OptionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Option
-        fields = ('optionTitle', 'optionImage', 'menCount', 'womenCount', 'voteID')
+        fields = ('voteID', 'optionTitle', 'optionImage', 'menCount', 'womenCount')
 
 
 class VoteFeedSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = VoteFeed
-        fields = ('voteID', 'voteTitle', 'voteAuthor', 'votePublishDate', 'voteExpireDate', 'voteImage', 'option')
+        fields = ('voteID', 'voteTitle', 'voteImage', 'voteAuthor', 'votePublishDate', 'voteExpireDate','option')
         depth = 1
 
 
