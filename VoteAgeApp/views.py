@@ -30,4 +30,4 @@ class OptionViewSet(viewsets.ModelViewSet):
 
 def test(request):
     print request
-    return HttpResponse(str(request.COOKIES) + '  \n  ' + str(request.user))
+    return HttpResponse(request.REQUEST)

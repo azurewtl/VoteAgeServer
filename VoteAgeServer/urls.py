@@ -21,5 +21,3 @@ urlpatterns = patterns('',
     url(r'^test/', views.test),
 ) 
 urlpatterns += staticfiles_urlpatterns()
-
-
