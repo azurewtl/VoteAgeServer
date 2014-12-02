@@ -20,6 +20,7 @@ class VoteFeed(models.Model):
 	title = models.CharField(max_length=32)
 	image = models.ImageField(upload_to='voteImage', null=True, blank=True)
 	author = models.CharField(max_length=32)
+	hasVoted = models.BooleanField(default=False)
 	longitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
 	latitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
 	publishDate = models.DateTimeField(auto_now=True, blank = True)
@@ -33,5 +34,3 @@ class Option(models.Model):
 	image = models.ImageField(upload_to='optionImage', null=True, blank=True)
 	menCount = models.IntegerField(default=0, blank=True)
 	womenCount = models.IntegerField(default=0, blank=True)
-	longitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
-	latitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
