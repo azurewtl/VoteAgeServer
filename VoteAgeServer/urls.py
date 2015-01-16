@@ -9,8 +9,8 @@ from VoteAgeApp import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
-router.register(r'votefeed', views.VoteFeedViewSet)
-router.register(r'option', views.OptionViewSet)
+router.register(r'vote', views.VoteViewSet)
+# router.register(r'option', views.OptionList)
 
 urlpatterns = patterns('',
     # Examples:
@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^API/', include(router.urls)),
     url(r'^test/', views.test),
+    url(r'^API/option/$', views.OptionList.as_view())
 ) 
 urlpatterns += staticfiles_urlpatterns()
 
